@@ -1,0 +1,15 @@
+<!-- <p>searchbar works!</p> -->
+<br>
+<div class="navbar-light bg-light">
+    <div class=" mt-6 mb-2">
+        <br>
+        <div class="my">
+            <form class="d-flex">
+                <input class="form-control ml-2" type="search" placeholder="Chercher la catégorie qui vous intéressez ..." aria-label="Search" [(ngModel)]="searchQuery" (input)="search()"> &nbsp; 
+                <!-- <div *ngFor="let result of searchResult">{{result.nom}}</div> -->
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            <br>
+        </div>
+    </div>
+</div>

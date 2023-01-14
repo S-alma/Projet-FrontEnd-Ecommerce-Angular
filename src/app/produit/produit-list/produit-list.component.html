@@ -1,0 +1,53 @@
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-3" *ngFor="let produit of produits">
+        <div class="card" (click)="goToProduitDetail(produit.id)">
+            <img src={{produit.image}} style="height: 200px; width: 300px;" class="img-fluid rounded-start" alt="...">
+            <div class="card-body">
+                <h5>{{produit.nom}}</h5>
+                <p class="card-text">{{produit.description}}</p>
+                <p class="card-text">Catégorie : {{produit.categorie.nom}}</p>      
+                <!-- <b class="btn btn-primary">Detail</b> &nbsp; -->
+                <b class="btn btn-primary">Ajouter au panier</b>
+            </div>
+        </div>
+        <br>
+        </div>
+    </div>
+    <br>
+    <a class="btn btn-primary" (click)="goToProduitCreate()"> Nouveau produit </a>
+</div>
+<br><br>
+
+<!-- <br>
+<div class="container">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Prix unitaire</th>
+            <th scope="col">Stock</th>
+            <th scope="col">Description</th>
+            <th scope="col">Image</th>
+            <th scope="col">Categorie</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let produit of produits" (click)="goToProduitDetail(produit.id)">
+                <th scope="row">{{produit.id}}</th>
+                <td>{{produit.nom}}</td>
+                <td>{{produit.prixUnitaire}}</td>
+                <td>{{produit.stock}}</td>
+                <td>{{produit.description}}</td>
+                <td>{{produit.image}}</td>
+                <td>{{produit.categorie.nom}}</td>
+            </tr>
+                <br>
+                <a class="btn btn-primary" (click)="goToProduitCreate()"> Nouveau produit </a>
+                <a [routerLink]="['/',{ outlets: { primary: ['navbar'],contenu: ['create'] } }]" *ngIf="isAdmin"> Nouveau produit </a>
+        </tbody>
+    </table>
+</div> -->
+  
